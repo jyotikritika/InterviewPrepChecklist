@@ -15,7 +15,6 @@ export default function App() {
     let tempArr = conceptsArr;
     const id = tempArr.length + 1;
     tempArr.push({ id, concept, completed: false });
-    console.log({ tempArr });
     setConceptsArr(tempArr);
     setConcept("");
   }
@@ -28,8 +27,7 @@ export default function App() {
         concept.completed = !completed;
       }
     });
-    console.log({ tempArr });
-    setConceptsArr(tempArr);
+    setConceptsArr([...tempArr]);
   }
 
   return (
